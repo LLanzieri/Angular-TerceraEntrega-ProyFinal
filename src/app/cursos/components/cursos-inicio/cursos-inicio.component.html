@@ -1,0 +1,34 @@
+<h1>Cursos asignados</h1>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of listaCursos$ | async">
+            <mat-accordion>
+                <mat-expansion-panel class="panel" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header class="panel-header">
+                        <mat-panel-title>
+                            <mat-icon class="icono">arrow_circle_right</mat-icon>
+                            {{item.nombre}}
+                        </mat-panel-title>
+                        <mat-panel-description class="panel-description">
+                            <mat-icon class="icono">info</mat-icon>
+                            Comisión: {{item.comision}}
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <ul class="lista">
+                        <li>Turno: {{item.turno}}</li>
+                        <li>Fecha de inicio: {{item.fechaInicio}}</li>
+                        <li>Fecha finalización estimada: {{item.fechaFin}}</li>
+                        <li>Dirección donde se dicta: {{item.direccion}}</li>
+                        <li>Aula: {{item.aula}}</li>
+                        <li><b><u>Alumnos inscriptos:</u></b></li>
+                        <ul>
+                            <li *ngFor="let alumno of item.alumnos">
+                                {{alumno.nombre}} {{alumno.apellido}}
+                            </li>
+                        </ul>
+                    </ul>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+</div>

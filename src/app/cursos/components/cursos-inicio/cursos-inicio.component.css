@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.icono {
+    margin: 10px
+}
+
+.panel {
+    border: 1px solid black;
+    margin: 10px;
+    background-color: #e6e6e4;
+}
+
+.panel-header {
+    background-color: #c0c0bd;
+    border: 1px solid black;
+}
+
+.panel-description {
+    color: black;
+}
+
+.lista li {
+    margin: 10px;
+}
